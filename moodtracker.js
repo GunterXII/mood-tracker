@@ -109,12 +109,10 @@ document.getElementById("feel").addEventListener("click", () => {
 
   const valore = moodToValue(testo);
 
-  // Aggiungi dati per il grafico
   labels.push(`Tentativo ${labels.length + 1}`);
   dataPoints.push(valore);
   moodChart.update();
 
-  // Mostra risposta motivazionale
   let risposta = "";
   if (valore >= 70) {
     risposta = frasiMotivazionali[Math.floor(Math.random() * frasiMotivazionali.length)];
@@ -126,6 +124,6 @@ document.getElementById("feel").addEventListener("click", () => {
 
   document.getElementById("response").textContent = risposta;
 
-  // Pulisci textarea
   moodInput.value = "";
 });
+
